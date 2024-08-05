@@ -17,8 +17,10 @@
   },
   "scripts": {
     "dev": "vite",
+    "prebuild": "rm -rf dist",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
