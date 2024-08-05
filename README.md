@@ -31,7 +31,19 @@ npm install tour-guide-turbham
 
 ## Usage
 
-1. Import the `TourGuide` component into your Vue application.
+1. To use the tour guide in your Vue project, import the component and the CSS file:
+
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import "tour-guide-turbham/dist/style.css";
+
+const app = createApp(App);
+
+app.mount("#app");
+```
+
+2. Import the `TourGuide` component into your Vue application.
 
 ```vue
 <template>
