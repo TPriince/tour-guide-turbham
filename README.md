@@ -73,6 +73,22 @@ const steps = ref([
 </script>
 ```
 
+Each step is an object that can contain these properties:
+
+```js
+const step = {
+  component: Component,
+  attachTo: {
+    element: "#element3",
+    on: "right",
+  },
+  text: "Click here to view all user settings",
+  width: "max-w-[206px]", // Tailwind CSS styles
+  offset: 48, // Guide offset from attached element
+  stepFunction: () => console.log("Step action"), // Function ro run in current step
+};
+```
+
 ## Props
 
 | Prop                | Type    | Required | Default | Description                                   |
@@ -84,7 +100,7 @@ const steps = ref([
 
 ## Events
 
-The component provides several events to handle tour actions. These events can be sued within the scope of the tour guide:
+The component provides several events to handle tour actions. These events can be used within the scope of the tour guide:
 
 | Event Name | Description                          |
 | ---------- | ------------------------------------ |
